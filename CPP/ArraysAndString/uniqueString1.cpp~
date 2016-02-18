@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+	int t;
+	string s;
+	cin>>t;
+	for(int i=0;i<t;i++){
+		int arr[256]={0},flag=0;
+		cin>>s;
+		for(int j=0;j<s.length();j++){
+			int x = s[j];
+			if(arr[x]>0){
+				cout<<"Not Unique!"<<endl;
+				flag=1;
+				break;
+			}
+			arr[x]++;
+		}
+		//if(flag==0){
+			cout<<"Unique!"<<endl;
+		//}
+	}
+	return 0;
+}
