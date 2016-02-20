@@ -10,13 +10,12 @@ string checkPermutation(string s1,string s2){
 	if(s1.size()!=s2.size()){
 		return "Not Permutation!";
 	}
-	int ar1[256]={0},ar2[256]={0};
+	int arr[256]={0};
 	for(int j=0;j<s1.size();j++){
-		ar1[s1[j]]++;
-		ar2[s2[j]]++;
+		arr[s1[j]]++;
 	}
-	for(int j=0;j<256;j++){
-		if(ar1[j]!=ar2[j]){
+	for(int j=0;j<s2.size();j++){
+		if(--arr[s2[j]]<0){
 			return "Not Permutation!";
 		}
 	}

@@ -4,7 +4,10 @@ using namespace std;
 //Returns string stating if string is unique or not.
 string isUnique(string s){
 	//There are 256 unique ascii characters hence array of size 256.
-	int arr[256]={0}
+	if(s.length()>256){
+		return "Not Unique!";
+	}
+	int arr[256]={0};
 	for(int j=0;j<s.length();j++){
 		//Convert character into ascii code.
 		int ascii_char = s[j];
